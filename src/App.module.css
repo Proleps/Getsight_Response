@@ -1,0 +1,29 @@
+html {
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #FBFBF6;
+}
+
+.App {
+  width: 1250px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+@media (max-width: 1199px) {
+  .App{
+    width: 90%;
+  }
+}
+
+@media (max-width: 575px) {
+  .App{
+    width: 90%;
+  }
+}

@@ -1,0 +1,124 @@
+.Purchase {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.Purchase_Info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 3px 0;
+  padding: 3px 0;
+  border: 1px solid black;
+  text-align: left;
+  font-size: 12px;
+  border: 1px solid #EBEDF8;
+  border-radius: 2px;
+}
+
+.Attention {
+  width: 20px;
+  height: 20px;
+  margin: 0 1em;
+  background-image: url('../../../icons/unit--i.png');
+  background-size: cover;
+}
+
+.Purchase_Actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Purchase_Counter{
+  display: flex;
+  width: 80px;
+  height: 40px;
+  margin-right: 5px;
+  justify-content: space-between;
+  border: 1px solid #EBEDF8;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.Counter_Input {
+  position: relative;
+  width: 40px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  text-align: center;
+  
+  font-weight: 600;
+  letter-spacing: .45px;
+  color: rgba(61,68,92,0.7);
+  font-size: 13px;
+  line-height: 1.2;
+  overflow: hidden;
+}
+
+.Counter_Buttons {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width:  40px;
+  border-radius: 2px;
+}
+
+.Button_Increment, .Button_Decrement {
+  height: 18px;
+  padding: 0;
+  background-color: #F0F2F4;
+  border: none;
+  outline: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.Button_Increment {
+  background-image: url('../../../icons/arrows.png');
+  background-position: -20px 0;
+}
+
+.Button_Decrement {
+  background-image: url('../../../icons/arrows.png');
+  background-position: -20px -20px;
+}
+
+.Button_Increment:active, .Button_Decrement:active {
+  background-color: #dde7f1;
+}
+
+.Purchase_Buy {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  width: 120px;
+  height: 40px;
+  background-color: #FDD292;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+
+  color: #262A3B;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: Arial,Helvetica,sans-serif;
+  font-weight: 600;
+  line-height: 30px;
+}
+
+.Purchase_Buy > img {
+  width: 20px;
+  height: 20px;
+}
+
+.Purchase_Buy:active {
+  background-color: #e6bc7d;
+}

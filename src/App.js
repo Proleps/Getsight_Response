@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from 'react'
+import classes from './App.module.css'
+import {Item} from './components/Item/Item'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+async function getProducts() {
+  const response = await fetch('./products.json')
+  return await response.json()
 }
 
-export default App;
+export const App = () => {
+  const [productList, setProductList] = useState(null)
+
+  useEffect(()=> {
+    getProducts()
+      .then(products => setProductList(products))
+    
+  }, [])
+
+  return (    
+    <main className={ classes.App }>
+        {productList?
+          (productList.map((item, index)=> (
+            <Item props={item} key={index+item.productId}/>
+          )))
+          :(<div>грузится</div>)}
+    </main>
+  );
+}

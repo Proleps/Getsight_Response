@@ -1,0 +1,67 @@
+.Description {
+  display: flex;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Code {
+  letter-spacing: .25px;
+  font-size: 12px;
+  line-height: 18px;
+  color: rgba(61,68,92,0.7);
+  text-align: left;
+  position: relative;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.Code span {
+  color: rgba(61,68,92,1);
+}
+
+.Title {
+  width: 100%;
+  max-height: 150px;
+  margin-bottom: 1em;
+  display: inline-block;
+  cursor: pointer;
+
+  text-align: left;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #262A3B;
+  overflow: hidden;
+  outline: none;
+  text-overflow: ellipsis;
+  letter-spacing: .1px;
+}
+
+.Assoc {
+  width: 100%;
+  color: #262A3B;
+  text-align: left;
+  font-size: 12px;
+  cursor: pointer;
+}
+@media (max-width: 1199px) {
+  .Code {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  .Title {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .Code {
+    text-align: left;
+  }
+}
+@media (max-width: 575px) {
+  .Code {
+    text-align: center;
+  }
+}
